@@ -19,8 +19,8 @@ body {
   margin: 10rem auto;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1.6fr 3fr 1fr;
+  grid-template-columns: repeat(4, [grid-start] 1fr [grid-end]);
+  grid-template-rows: [header-start] 1fr [header-end box-start] 1.6fr [box-end menu-start] 3fr [menu-end footer-start] 1fr [footer-end];
   grid-gap: 1rem;
 }
 
@@ -28,21 +28,19 @@ body {
   background-color: orange;
 
   &--1 {
-    grid-row: 1/2;
-    grid-column: 1/-1;
+    grid-column: grid-start 1 / grid-end -1;
   }
 
   &--6 {
-    grid-row: 2/-2;
-    grid-column: -2/-1;
+    grid-column: grid-end -2 / grid-end -1;
+    grid-row: header-end / footer-end;
   }
 
   &--5 {
-    grid-row: -3/-2;
-    grid-column: 1/4;
+    grid-column: grid-start 1 / grid-start -1;
   }
 
   &--7 {
-    grid-column: 1/-1;
+    grid-column: grid-start 1 / grid-start -1;
   }
 }
