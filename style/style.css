@@ -12,4 +12,25 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.container {
+  padding: 1rem;
+  width: 80vw;
+  height: 80vh;
+  background-color: #eee;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-rows: minmax(min-content, 10px) min-content min-content;
+      grid-template-rows: minmax(-webkit-min-content, 10px) -webkit-min-content -webkit-min-content;
+      grid-template-rows: minmax(min-content, 10px) min-content min-content;
+  -ms-grid-columns: minmax(200px, min-content) max-content;
+      grid-template-columns: minmax(200px, -webkit-min-content) -webkit-max-content;
+      grid-template-columns: minmax(200px, min-content) max-content;
+}
+
+.item {
+  background-color: orangered;
+}
 /*# sourceMappingURL=style.css.map */
