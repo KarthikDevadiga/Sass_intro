@@ -12,4 +12,33 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.container {
+  padding: 1rem;
+  background-color: #eee;
+  height: 80vh;
+  width: 80vw;
+  margin: 10rem auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-rows: (150px)[2];
+      grid-template-rows: repeat(2, 150px);
+  -ms-grid-columns: (150px)[2];
+      grid-template-columns: repeat(2, 150px);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-auto-flow: column;
+}
+
+.item {
+  background-color: aqua;
+}
+
+.item--5 {
+  grid-column: 1/-1;
+}
 /*# sourceMappingURL=style.css.map */
